@@ -1,0 +1,58 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Hospital Manageent</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<style>
+body{
+background: url("https://cdn.wallpapersafari.com/24/69/qrgVOf.jpg");
+background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;}
+</style>
+
+<div class="container">
+   <div class="row">
+   <h1>Docter list</h1>
+   </div>
+            <div class = "row">
+			<div class = "col-lg-3">
+		<a th:href = "@{/home}" class = "btn btn-primary btn-sm mb-3">home </a> 
+		<a th:href = "@{/back}" class = "btn btn-primary btn-sm mb-3">back </a> 
+		
+			</div>
+		
+   
+   <table class="table table-striped table-bordered">
+   <thead class="table-primary">
+   <tr>
+ <th>Docter name</th>
+<th>Docter Department</th>
+<th> Docter Shift</th>
+<th>Docter Number</th>
+<th>Docter place</th>
+<th>Update</th>
+<th>Delete</th>
+</tr>
+</thead>
+   <tbody>
+   <tr th:each = "d:${docterlist}"> 
+   <td th:text = "${d.doctername}"></td>
+   <td th:text = "${d.Department}"></td>
+   <td th:text = "${d.Shift}"></td>
+   <td th:text = "${d.Number}"></td> 
+   <td th:text = "${d.Place}"></td> 
+   
+   <td><a th:href = "@{/docter/edit/{id}(id=${d.id})}" class = "btn btn-primary">Update</a>
+   <td><a th:href = "@{/deletedoc/{id}(id=${d.id})}" class = "btn btn-danger">Delete</a>
+    </tr>
+   </tbody>
+   </table>
+ </div>
+
+</html>

@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Marks Management</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+
+<style>
+body{
+background: url("https://www.itij.com/sites/default/files/styles/og_image/public/2021-08/hospital-modern.jpg?h=f8702894&itok=r_2edjAc");
+background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;}
+
+
+</style>
+
+<div class="container" >
+
+
+<br><br><br><br><br><h1 style="color: red"> Admin Forget Section</h1>
+<form class="col-md-4 col-md-offset-6" th:action="@{/addminsave}" th:object="${Userd}" method="post">
+
+<label><h6>Admin Name</h6></label>
+<input type ="text"
+ class="form-control" 
+ th:field="*{Name}">
+ 
+ 
+<label><h6>AdminId</h6></label>
+<input type ="text"
+ class="form-control"
+   th:field="*{userid}">
+   
+<label><h6>New Password</h6></label>
+<input type ="text" 
+class="form-control" 
+th:field="*{password}">
+
+<br>
+<button type="submit" class="btn btn-success">ADD ADMIN</button>
+</form>
+
+
+
+</div>
+
+
+
+</body>

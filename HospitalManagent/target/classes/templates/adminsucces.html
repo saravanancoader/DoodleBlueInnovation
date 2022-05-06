@@ -1,0 +1,85 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Marks Management</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+<style>
+body{
+background: url("https://thumbs.dreamstime.com/b/male-doctor-hospital-background-holding-stethoscope-smiling-healthcare-service-general-practice-medical-career-concept-109300718.jpg");
+background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;}
+
+
+</style>
+
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+    <a class="navbar-brand" href="#">Welcome to DOODLE HOSPITAL </a>
+  </nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+     
+      <a class="nav-item nav-link active" >ADMIN </a>
+     
+      <a class="nav-item nav-link active" href="Welcome">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="#">Back<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active"  href="adminlogin" >logout</a>
+      <a class="nav-item nav-link active"  href="#">About</a>
+      
+    </div>
+    <div class="container" style="color: green">Congratess!!! Loin Success
+    
+    <marquee behavior="scroll" direction="right" scrollamount="3">Welcome To Doodle Hospital</marquee>
+    
+  </div>
+
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="nav-item nav-link active" th:href="@{patient/new}">Patient</a>
+  
+<a class="nav-item nav-link active" th:href="@{docter/new}">Docter</a>
+ <a class="nav-item nav-link active" th:href="@{/patientlist}">Patient list</a>
+<a class="nav-item nav-link active" th:href="@{/docterlist}">Docter list</a>
+<a class="nav-item nav-link active" th:href="@{/addadmin}">Forget Password</a>
+<br>
+<br>
+<marquee width="60%" direction="right" height="100px">
+The World best Quality Docter is here
+</marquee>
+
+
+</nav>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">No of Doctor</th>
+    
+   
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>10</td>
+    </tr>
+
+
+
+    
+  </tbody>
+</table>
+
+</body>

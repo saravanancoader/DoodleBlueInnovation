@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Marks Management</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+<style>
+a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+      }
+</style>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Unauthorized User </h4>
+  <p>Oh no!!,Somthing went to Wrong ,Please Enter the correct User Id and Password,</p>
+  <hr>
+  <p class="mb-0">Sorry we Not allowed to Access the Admin Page,Please Login Again</p>
+</div>
+<button type="button" class="btn btn-primary">
+        <a th:href="@{/adminlogin}">Login Again</a>
+      </button>
+      
+
+</body>
+</html>
